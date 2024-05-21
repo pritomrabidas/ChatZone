@@ -114,14 +114,14 @@ const Navbar = () => {
 
 
   return (
-    <div className="fixed w-full z-20">
+    <div className="fixed w-full  z-20">
     <div className="">
     <div className=" bg-white justify-between w-full p-1 pl-3 shadow-lg border-4 border-white">
       <div className=" flex">
       <div className="flex gap-3">
           <span className="w-10 h-10 rounded-full m-auto items-center"><PiChatTeardropText className="w-10 h-10 rounded-full text-navegrey"/></span>
-          <div className=" flex px-2 h-10 rounded-3xl bg-slate-300 m-auto items-center">
-            <span className="m-auto flex items-center pl-1"><GoSearch/></span>
+          <div className=" flex px-4 h-11 rounded-3xl bg-slate-300 m-auto items-center">
+            <span className="m-auto flex items-center pl-2"><GoSearch/></span>
             <input type="search" placeholder="Search Messenger" className="w-48 outline-none placeholder:text-secandari placeholder:font-lobster text-sm px-1 bg-transparent text-navegrey font-nunitoFont " />
           </div>
         </div>
@@ -135,7 +135,7 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="flex justify-end m-auto">
-          <ul className="text-navegrey text-2xl ml-6 flex gap-3">
+          <ul className="text-navegrey text-2xl flex gap-3">
             <li className=" w-10 h-10 rounded-full bg-slate-400 m-auto items-center flex justify-center">
             <img src="pic-2.png" alt="" className="w-8 h-8 rounded-full" />
             </li>
@@ -146,9 +146,9 @@ const Navbar = () => {
     </div>
     </div>
     <div>
-      <div className="pl-3 pt-2 bg-slate-100 w-1/5 h-screen hover:overflow-scroll "> 
+      <div className="pl-3 pt-2 bg-slate-100 w-1/5 h-screen overflow-scroll fixed "> 
         <div className="">
-          <ul className="pt-2 text-lg text-pacifico font-semibold text-nunitoFont">
+          <ul className="pt-3 text-lg text-pacifico font-semibold text-nunitoFont">
             <li onClick={HandleProfile} style={{ backgroundColor: profile ? 'rgb(203 213 225)' : '', transition: 'background-color 0.3s ease' }} className="flex gap-4 mb-3 hover:bg-slate-300 hover:w-screen py-2 pl-2 rounded-lg">
               <img src="pic-2.png" alt="" className="w-8 h-8 rounded-full" />
               <p>Pritom Rabi Das</p>
@@ -177,10 +177,6 @@ const Navbar = () => {
             <li onClick={HandleBlock} style={{ backgroundColor: block ? 'rgb(203 213 225)' : '', transition: 'background-color 0.3s ease' }} className="flex gap-2 mt-5 hover:bg-slate-300 hover:w-screen py-2 pl-2 rounded-lg">
               <span className="text-2xl ml-2 mt-[2px] "><TbLockCancel className="text-navegrey"/></span>
               <h3 className="">Block</h3>
-            </li>
-            <li onClick={HandleGame} style={{ backgroundColor: game ? 'rgb(203 213 225)' : '', transition: 'background-color 0.3s ease' }} className="flex gap-2 mt-5 hover:bg-slate-300 hover:w-screen py-2 pl-2 rounded-lg">
-              <span className="text-2xl ml-2 mt-[2px] "><IoGameController className="text-navegrey"/></span>
-              <h3 className="">Game</h3>
             </li>
           </ul>
         </div>
