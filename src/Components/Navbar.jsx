@@ -1,4 +1,4 @@
-import { IoIosSettings } from "react-icons/io";
+// import { IoIosSettings } from "react-icons/io";
 import { IoMdHome } from "react-icons/io";
 import { RiChat1Fill } from "react-icons/ri";
 import { TbLockCancel } from "react-icons/tb";
@@ -114,8 +114,7 @@ const Navbar = () => {
 
 
   return (
-    <div className="fixed w-full  z-20">
-    <div className="">
+    <div className="fixed w-full z-20">
     <div className=" bg-white justify-between w-full p-1 pl-3 shadow-lg border-4 border-white">
       <div className=" flex">
       <div className="flex gap-3">
@@ -144,15 +143,14 @@ const Navbar = () => {
         </div>
       </div>
     </div>
-    </div>
     <div>
-      <div className="pl-3 pt-2 bg-slate-100 w-1/5 h-screen overflow-scroll fixed "> 
+      <div className="pl-3 pt-2 bg-slate-100 w-[270px] h-screen overflow-scroll"> 
         <div className="">
           <ul className="pt-3 text-lg text-pacifico font-semibold text-nunitoFont">
             <li onClick={HandleProfile} style={{ backgroundColor: profile ? 'rgb(203 213 225)' : '', transition: 'background-color 0.3s ease' }} className="flex gap-4 mb-3 hover:bg-slate-300 hover:w-screen py-2 pl-2 rounded-lg">
               <img src="pic-2.png" alt="" className="w-8 h-8 rounded-full" />
-              <p>Pritom Rabi Das</p>
-              <span className="text-2xl ml-2 mt-[2px]"><Link to="/profile"><IoIosSettings/></Link></span>
+              <p><Link to="/profile">Pritom Rabi Das</Link></p>
+              <span className="text-2xl ml-2 mt-[2px]"></span>
             </li>
             <li onClick={HandleHome} style={{ backgroundColor: home ? 'rgb(203 213 225)' : '', transition: 'background-color 0.3s ease' }} className="flex gap-2 mt-2 hover:bg-slate-300 hover:w-screen py-2 pl-2 rounded-lg">
               <span className="text-2xl ml-2 mt-[2px] "><IoMdHome className="text-navegrey"/></span>
