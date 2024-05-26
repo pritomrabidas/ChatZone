@@ -11,7 +11,7 @@ const Profile = () => {
             alt=""
             className="w-screen h-[270px] relative"
           />
-          <div className="absolute left-[40%] top-[200px]  m-auto flex justify-center items-center">
+          <div className="absolute left-[45%] top-[200px]  m-auto flex justify-center items-center">
             <img
               src="pic-2.png"
               alt=""

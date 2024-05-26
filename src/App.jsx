@@ -9,6 +9,7 @@ import Request from "./Components/Pages/Request";
 import Friend from "./Components/Pages/Friend";
 import Block from "./Components/Pages/Block";
 import Group from "./Components/Pages/Group";
+import Chat from "./Components/Pages/Chat";
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
         <Route path="/" element={<Layout />}>
           <Route path="/profile" element={< Profile/>}></Route>
           <Route index element={< Home/>}></Route>
+          <Route path="/chat" element={< Chat/>}></Route>
           <Route path="/people" element={< People/>}></Route>
           <Route path="/request" element={< Request/>}></Route>
           <Route path="/friend" element={< Friend/>}></Route>
