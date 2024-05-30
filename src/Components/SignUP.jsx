@@ -20,23 +20,26 @@ const SignUP = () => {
             placeholder="Full Name"
             className="border-2 border-gray-600 outline-none w-96 py-3 px-6 rounded-xl justify-center flex m-auto mt-2 bg-transparent drop-shadow-xl text-slate-900 text-base"
           />
+          <p className="pl-14 mt-[2px] text-red-900 text-sm font-normal font-['poetsen']"></p>
           <input
             type="email"
             placeholder="Email Address"
             className="border-2 border-gray-600 outline-none w-96 py-3 px-6 rounded-xl justify-center flex mx-auto mt-2 bg-transparent drop-shadow-xl text-slate-900 text-base"
           />
+          <p className="pl-14 mt-[2px] text-red-900 text-sm font-normal font-['poetsen']"></p>
           <input
             type="password"
             placeholder="Password"
             className="border-2 border-gray-600 outline-none w-96 py-3 px-6 rounded-xl justify-center flex mx-auto mt-3 bg-transparent drop-shadow-xl text-slate-700 text-base"
           />
+          <p className="pl-14 mt-[2px] text-red-900 text-sm font-normal font-['poetsen']"></p>
           <button className="border-2 w-96 py-3 px-6 rounded-2xl justify-center flex mx-auto mt-6 drop-shadow-xl text-secandari text-base bg-gray-800">
              Registration
           </button>
           <p className="justify-center flex mx-auto text-base mt-2 text-gray-700">
             Don't have an account ?{" "}
             <span className="decoration-1 list-disc">
-              <Link to="/signin"> SignIn</Link>
+              <Link to="/signin"><span className="underline hover:text-gray-500">SignIn</span> </Link>
             </span>
           </p>
         </div>

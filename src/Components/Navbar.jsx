@@ -161,7 +161,7 @@ const Navbar = () => {
                 }}
                 className=" w-28 h-14 m-auto flex items-center justify-center rounded-lg bg-white delay-300 hover:bg-slate-100"
               >
-                <IoMdHome />
+                <Link to="/"><IoMdHome /></Link>
               </li>
               <li
                 onClick={HandleRequest}
@@ -171,7 +171,7 @@ const Navbar = () => {
                 }}
                 className=" w-28 h-14 m-auto flex items-center justify-center rounded-lg bg-white delay-300 hover:bg-slate-100"
               >
-                <MdPeopleAlt />
+                <Link to="/request"><MdPeopleAlt /></Link>
               </li>
               <li
                 onClick={HandleFriend}
@@ -181,7 +181,7 @@ const Navbar = () => {
                 }}
                 className=" w-28 h-14 m-auto flex items-center justify-center rounded-lg bg-white delay-300 hover:bg-slate-100"
               >
-                <SlPeople />
+                <Link to="/friend"><SlPeople /></Link>
               </li>
               <li
                 onClick={HandleBlock}
@@ -191,7 +191,7 @@ const Navbar = () => {
                 }}
                 className=" w-28 h-14 m-auto flex items-center justify-center rounded-lg bg-white delay-300 hover:bg-slate-100"
               >
-                <TbLockCancel />
+                <Link to="/block"><TbLockCancel /></Link>
               </li>
               <li
                 onClick={HandleGame}
@@ -211,7 +211,7 @@ const Navbar = () => {
                 <RiGroup2Line className=" text-[33px] text-blue-950" />
               </li>
               <li className=" w-10 h-10 rounded-full bg-slate-400 m-auto items-center flex justify-center">
-                <img src="pic-2.png" alt="" className="w-8 h-8 rounded-full" />
+                <Link to="/profile"><img src="pic-2.png" alt="" className="w-8 h-8 rounded-full" /></Link>
               </li>
               <li className=" w-10 h-10 rounded-full bg-slate-400 m-auto items-center flex justify-center">
                 <FiAlignCenter />
