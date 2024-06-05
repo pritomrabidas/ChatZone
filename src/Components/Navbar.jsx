@@ -1,4 +1,3 @@
-// import { IoIosSettings } from "react-icons/io";
 import { IoMdHome } from "react-icons/io";
 import { RiChat1Fill } from "react-icons/ri";
 import { TbLockCancel } from "react-icons/tb";
@@ -161,7 +160,9 @@ const Navbar = () => {
                 }}
                 className=" w-28 h-14 m-auto flex items-center justify-center rounded-lg bg-white delay-300 hover:bg-slate-100"
               >
-                <Link to="/"><IoMdHome /></Link>
+                <Link to="/">
+                  <IoMdHome />
+                </Link>
               </li>
               <li
                 onClick={HandleRequest}
@@ -171,7 +172,9 @@ const Navbar = () => {
                 }}
                 className=" w-28 h-14 m-auto flex items-center justify-center rounded-lg bg-white delay-300 hover:bg-slate-100"
               >
-                <Link to="/request"><MdPeopleAlt /></Link>
+                <Link to="/request">
+                  <MdPeopleAlt />
+                </Link>
               </li>
               <li
                 onClick={HandleFriend}
@@ -181,7 +184,9 @@ const Navbar = () => {
                 }}
                 className=" w-28 h-14 m-auto flex items-center justify-center rounded-lg bg-white delay-300 hover:bg-slate-100"
               >
-                <Link to="/friend"><SlPeople /></Link>
+                <Link to="/friend">
+                  <SlPeople />
+                </Link>
               </li>
               <li
                 onClick={HandleBlock}
@@ -191,7 +196,9 @@ const Navbar = () => {
                 }}
                 className=" w-28 h-14 m-auto flex items-center justify-center rounded-lg bg-white delay-300 hover:bg-slate-100"
               >
-                <Link to="/block"><TbLockCancel /></Link>
+                <Link to="/block">
+                  <TbLockCancel />
+                </Link>
               </li>
               <li
                 onClick={HandleGame}
@@ -210,8 +217,21 @@ const Navbar = () => {
               <li className=" w-10 h-10 rounded-full bg-slate-400 m-auto items-center flex justify-center">
                 <RiGroup2Line className=" text-[33px] text-blue-950" />
               </li>
-              <li className=" w-10 h-10 rounded-full bg-slate-400 m-auto items-center flex justify-center">
-                <Link to="/profile"><img src="pic-2.png" alt="" className="w-8 h-8 rounded-full" /></Link>
+              <li
+                onClick={HandleProfile}
+                style={{
+                  backgroundColor: profile ? "rgb(203 213 225)" : "",
+                  transition: "background-color 0.3s ease",
+                }}
+                className=" w-10 h-10 rounded-full bg-slate-400 m-auto items-center flex justify-center"
+              >
+                <Link to="/profile">
+                  <img
+                    src="pic-2.png"
+                    alt=""
+                    className="w-8 h-8 rounded-full"
+                  />
+                </Link>
               </li>
               <li className=" w-10 h-10 rounded-full bg-slate-400 m-auto items-center flex justify-center">
                 <FiAlignCenter />
@@ -224,128 +244,128 @@ const Navbar = () => {
         <div className="pl-3 pt-2 bg-slate-100 w-1/4 h-screen overflow-scroll fixed">
           <div className="">
             <ul className="pt-3 text-lg text-pacifico font-semibold text-nunitoFont">
-              <li
-                onClick={HandleProfile}
-                style={{
-                  backgroundColor: profile ? "rgb(203 213 225)" : "",
-                  transition: "background-color 0.3s ease",
-                }}
-                className="flex gap-4 mb-3 hover:bg-slate-300 hover:w-screen py-2 pl-2 rounded-lg"
-              >
-                <Link to="/profile" className="flex gap-2">
+              <Link to="/profile">
+                <li
+                  onClick={HandleProfile}
+                  style={{
+                    backgroundColor: profile ? "rgb(203 213 225)" : "",
+                    transition: "background-color 0.3s ease",
+                  }}
+                  className="flex gap-4 mb-3 hover:bg-slate-300 hover:w-screen py-2 pl-2 rounded-lg"
+                >
                   <img
                     src="pic-2.png"
                     alt=""
                     className="w-8 h-8 rounded-full"
                   />
                   <p>Pritom Rabi Das</p>
-                </Link>
-              </li>
-              <li
-                onClick={HandleHome}
-                style={{
-                  backgroundColor: home ? "rgb(203 213 225)" : "",
-                  transition: "background-color 0.3s ease",
-                }}
-                className="flex gap-2 mt-2 hover:bg-slate-300 hover:w-screen py-2 pl-2 rounded-lg"
-              >
-                <Link to="/" className="flex gap-2">
+                </li>
+              </Link>
+              <Link to="/">
+                <li
+                  onClick={HandleHome}
+                  style={{
+                    backgroundColor: home ? "rgb(203 213 225)" : "",
+                    transition: "background-color 0.3s ease",
+                  }}
+                  className="flex gap-2 mt-2 hover:bg-slate-300 hover:w-screen py-2 pl-2 rounded-lg"
+                >
                   <span className="text-2xl ml-2 mt-[2px] ">
                     <IoMdHome className="text-navegrey" />
                   </span>
                   <h3 className="">Home</h3>
-                </Link>
-              </li>
-              <li
-                onClick={HandleChat}
-                style={{
-                  backgroundColor: chat ? "rgb(203 213 225)" : "",
-                  transition: "background-color 0.3s ease",
-                }}
-                className="flex gap-2 mt-5 hover:bg-slate-300 hover:w-screen py-2 pl-2 rounded-lg"
-              >
-                <Link to="/chat" className="flex gap-2">
+                </li>
+              </Link>
+              <Link to="/chat">
+                <li
+                  onClick={HandleChat}
+                  style={{
+                    backgroundColor: chat ? "rgb(203 213 225)" : "",
+                    transition: "background-color 0.3s ease",
+                  }}
+                  className="flex gap-2 mt-5 hover:bg-slate-300 hover:w-screen py-2 pl-2 rounded-lg"
+                >
                   <span className="text-2xl ml-2 mt-[2px] ">
                     <RiChat1Fill className="text-navegrey" />
                   </span>
                   <h3 className="">Chat</h3>
-                </Link>
-              </li>
-              <li
-                onClick={HandlePeople}
-                style={{
-                  backgroundColor: people ? "rgb(203 213 225)" : "",
-                  transition: "background-color 0.3s ease",
-                }}
-                className="flex gap-2 mt-5 hover:bg-slate-300 hover:w-screen py-2 pl-2 rounded-lg"
-              >
-                <Link to="/people" className="flex gap-2">
+                </li>
+              </Link>
+              <Link to="/people">
+                <li
+                  onClick={HandlePeople}
+                  style={{
+                    backgroundColor: people ? "rgb(203 213 225)" : "",
+                    transition: "background-color 0.3s ease",
+                  }}
+                  className="flex gap-2 mt-5 hover:bg-slate-300 hover:w-screen py-2 pl-2 rounded-lg"
+                >
                   <span className="text-2xl ml-2 mt-[2px] ">
                     <BsFillPeopleFill className="text-navegrey" />
                   </span>
                   <h3 className="">People</h3>
-                </Link>
-              </li>
-              <li
-                onClick={HandleRequest}
-                style={{
-                  backgroundColor: request ? "rgb(203 213 225)" : "",
-                  transition: "background-color 0.3s ease",
-                }}
-                className="flex gap-2 mt-5 hover:bg-slate-300 hover:w-screen py-2 pl-2 rounded-lg"
-              >
-                <Link to="/request" className="flex gap-2">
+                </li>
+              </Link>
+              <Link to="/request">
+                <li
+                  onClick={HandleRequest}
+                  style={{
+                    backgroundColor: request ? "rgb(203 213 225)" : "",
+                    transition: "background-color 0.3s ease",
+                  }}
+                  className="flex gap-2 mt-5 hover:bg-slate-300 hover:w-screen py-2 pl-2 rounded-lg"
+                >
                   <span className="text-2xl ml-2 mt-[2px] ">
                     <MdPeopleAlt className="text-navegrey" />
                   </span>
                   <h3 className="">Friend Request</h3>
-                </Link>
-              </li>
-              <li
-                onClick={HandleFriend}
-                style={{
-                  backgroundColor: friend ? "rgb(203 213 225)" : "",
-                  transition: "background-color 0.3s ease",
-                }}
-                className="flex gap-2 mt-5 hover:bg-slate-300 hover:w-screen py-2 pl-2 rounded-lg"
-              >
-                <Link to="/friend" className="flex gap-2">
+                </li>
+              </Link>
+              <Link to="/friend">
+                <li
+                  onClick={HandleFriend}
+                  style={{
+                    backgroundColor: friend ? "rgb(203 213 225)" : "",
+                    transition: "background-color 0.3s ease",
+                  }}
+                  className="flex gap-2 mt-5 hover:bg-slate-300 hover:w-screen py-2 pl-2 rounded-lg"
+                >
                   <span className="text-2xl ml-2 mt-[2px] ">
                     <SlPeople className="text-navegrey" />
                   </span>
                   <h3 className="">Friends</h3>
-                </Link>
-              </li>
-              <li
-                onClick={HandleGroup}
-                style={{
-                  backgroundColor: group ? "rgb(203 213 225)" : "",
-                  transition: "background-color 0.3s ease",
-                }}
-                className="flex gap-2 mt-5 hover:bg-slate-300 hover:w-screen py-2 pl-2 rounded-lg"
-              >
-                <Link to="/group" className="flex gap-2">
+                </li>
+              </Link>
+              <Link to="/group">
+                <li
+                  onClick={HandleGroup}
+                  style={{
+                    backgroundColor: group ? "rgb(203 213 225)" : "",
+                    transition: "background-color 0.3s ease",
+                  }}
+                  className="flex gap-2 mt-5 hover:bg-slate-300 hover:w-screen py-2 pl-2 rounded-lg"
+                >
                   <span className="text-2xl ml-2 mt-[2px] ">
                     <RiGroup2Line className="text-navegrey" />
                   </span>
                   <h3 className="">Group</h3>
-                </Link>
-              </li>
-              <li
-                onClick={HandleBlock}
-                style={{
-                  backgroundColor: block ? "rgb(203 213 225)" : "",
-                  transition: "background-color 0.3s ease",
-                }}
-                className="flex gap-2 mt-5 hover:bg-slate-300 hover:w-screen py-2 pl-2 rounded-lg"
-              >
-                <Link to="/block" className="flex gap-2">
+                </li>
+              </Link>
+              <Link to="/block">
+                <li
+                  onClick={HandleBlock}
+                  style={{
+                    backgroundColor: block ? "rgb(203 213 225)" : "",
+                    transition: "background-color 0.3s ease",
+                  }}
+                  className="flex gap-2 mt-5 hover:bg-slate-300 hover:w-screen py-2 pl-2 rounded-lg"
+                >
                   <span className="text-2xl ml-2 mt-[2px] ">
                     <TbLockCancel className="text-navegrey" />
                   </span>
                   <h3 className="">Block</h3>
-                </Link>
-              </li>
+                </li>
+              </Link>
             </ul>
           </div>
         </div>
