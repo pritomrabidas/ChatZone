@@ -152,6 +152,7 @@ const Navbar = () => {
           </div>
           <div className=" flex justify-center mx-auto">
             <ul className="flex ml-24 text-gray-800 text-3xl gap-3">
+              <Link to="/">
               <li
                 onClick={HandleHome}
                 style={{
@@ -160,10 +161,10 @@ const Navbar = () => {
                 }}
                 className=" w-28 h-14 m-auto flex items-center justify-center rounded-lg bg-white delay-300 hover:bg-slate-100"
               >
-                <Link to="/">
                   <IoMdHome />
-                </Link>
               </li>
+                </Link>
+                <Link to="/request">
               <li
                 onClick={HandleRequest}
                 style={{
@@ -172,10 +173,10 @@ const Navbar = () => {
                 }}
                 className=" w-28 h-14 m-auto flex items-center justify-center rounded-lg bg-white delay-300 hover:bg-slate-100"
               >
-                <Link to="/request">
                   <MdPeopleAlt />
-                </Link>
               </li>
+                </Link>
+                <Link to="/friend">
               <li
                 onClick={HandleFriend}
                 style={{
@@ -184,10 +185,10 @@ const Navbar = () => {
                 }}
                 className=" w-28 h-14 m-auto flex items-center justify-center rounded-lg bg-white delay-300 hover:bg-slate-100"
               >
-                <Link to="/friend">
                   <SlPeople />
-                </Link>
               </li>
+              </Link>
+              <Link to="/block">
               <li
                 onClick={HandleBlock}
                 style={{
@@ -196,10 +197,9 @@ const Navbar = () => {
                 }}
                 className=" w-28 h-14 m-auto flex items-center justify-center rounded-lg bg-white delay-300 hover:bg-slate-100"
               >
-                <Link to="/block">
                   <TbLockCancel />
-                </Link>
               </li>
+                </Link>
               <li
                 onClick={HandleGame}
                 style={{
@@ -214,10 +214,10 @@ const Navbar = () => {
           </div>
           <div className="flex justify-end m-auto">
             <ul className="text-navegrey text-2xl flex gap-3">
-              <li className=" w-10 h-10 rounded-full bg-slate-400 m-auto items-center flex justify-center">
+              {/* <li className=" w-10 h-10 rounded-full bg-slate-400 m-auto items-center flex justify-center">
                 <RiGroup2Line className=" text-[33px] text-blue-950" />
-              </li>
-              <li
+              </li> */}
+              {/* <li
                 onClick={HandleProfile}
                 style={{
                   backgroundColor: profile ? "rgb(203 213 225)" : "",
@@ -232,7 +232,7 @@ const Navbar = () => {
                     className="w-8 h-8 rounded-full"
                   />
                 </Link>
-              </li>
+              </li> */}
               <li className=" w-10 h-10 rounded-full bg-slate-400 m-auto items-center flex justify-center">
                 <FiAlignCenter />
               </li>
@@ -261,7 +261,7 @@ const Navbar = () => {
                   <p>Pritom Rabi Das</p>
                 </li>
               </Link>
-              <Link to="/">
+              {/* <Link to="/">
                 <li
                   onClick={HandleHome}
                   style={{
@@ -275,7 +275,7 @@ const Navbar = () => {
                   </span>
                   <h3 className="">Home</h3>
                 </li>
-              </Link>
+              </Link> */}
               <Link to="/chat">
                 <li
                   onClick={HandleChat}
