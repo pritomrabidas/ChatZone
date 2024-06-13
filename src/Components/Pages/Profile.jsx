@@ -10,7 +10,7 @@ const Profile = () => {
   };
   return (
     <div className=" bg-slate-100 absolute left-1/4">
-      <div className=" h-screen w-full">
+      <div className=" h-full w-full">
         <div className="">
           <img
             src="cover-1.png"
