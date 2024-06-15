@@ -11,16 +11,16 @@ const FriendItem = () => {
     <div className=" m-4">
       <div className=" border-2 py-4 px-6 rounded-xl flex gap-3 bg-scroll w-full">
         <div className="">
-          <img src="pic-2.png" alt="" className="w-16 h-16 rounded-xl" />
+          <img src="pic-2.png" alt="" className="w-14 xl:w-14 lg:w-12 h-14 xl:h-14 lg:h-12 rounded-xl" />
         </div>
         <div className="">
-          <p className=" text-2xl text-pacifico font-semibold text-nunitoFont mt-3">
+          <p className=" text-xl xl:text-xl lg:text-lg text-pacifico font-semibold text-nunitoFont mt-3">
             Pritom Rabi Das
           </p>
         </div>
-        <div className=" justify-end flex m-auto mr-40">
-          <button onClick={toggleDropdown}>
-            <HiOutlineDotsVertical className="text-2xl text-red-600"/>
+        <div className=" justify-end flex m-auto text-end ">
+          <button>
+            <HiOutlineDotsVertical onClick={toggleDropdown} className="text-2xl xl:text-2xl lg:text-xl text-red-600"/>
           </button>
           {DropdownVisible && (
             <div className="dropdown">

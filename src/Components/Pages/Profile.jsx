@@ -15,44 +15,46 @@ const Profile = () => {
           <img
             src="cover-1.png"
             alt=""
-            className="w-screen h-[270px] relative"
+            className="w-screen h-[270px] xl:h-[270px] lg:h-[240px] md:h-[190px] relative"
           />
-          <div className="absolute left-[45%] top-[200px]  m-auto flex justify-center items-center">
+          <div className="absolute left-[45%] top-[200px] xl:top-[200px] lg:top-[170px] md:top-[120px] m-auto flex justify-center items-center">
             <img
               src="pic-2.png"
               alt=""
-              className=" w-32 h-32 rounded-full relative"
+              className=" w-32 xl:w-32 lg:w-32 md:w-28 h-32 xl:h-32 lg:h-32 md:h-28 rounded-full relative"
             />
             <span
               onClick={() => HandleCamera()}
-              className="w-8 h-8 rounded-lg border-2 drop-shadow-lg border-slate-100 bg-slate-50 m-auto flex justify-center items-center absolute left-1/3 ml-[10px]"
+              className="w-8 xl:w-8 lg:w-8 md:w-6 h-8 xl:h-8 lg:h-8 md:h-6 rounded-lg border-2 drop-shadow-lg border-slate-100 bg-slate-50 m-auto flex justify-center items-center absolute left-1/3 ml-[10px]"
             >
               {show ? (
-                <FaCameraRetro className="text-xl text-slate-600 " />
+                <FaCameraRetro className="text-xl xl:text-xl lg:text-xl md:text-sm text-slate-600 " />
               ) : (
                 <input type="file" className=" bg-transparent border-none" />
               )}
             </span>
           </div>
         </div>
-        <div className="mx-auto flex justify-center mt-16  gap-4">
-          <span className="text-2xl font-bold text-red-950 p-1 rounded-xl border-[1px] border-slate-200 drop-shadow-md bg-slate-50">
+        <div className="mx-auto flex justify-center mt-16 gap-4">
+          <span className="text-2xl xl:text-3xl lg:text-2xl md:text-xl font-bold text-red-950 p-1 md:p-2 rounded-xl border-[1px] border-slate-200 drop-shadow-md bg-slate-50">
             <MdEditDocument />
           </span>
-          <p className="text-3xl  text-pacifico font-bold text-nunitoFont">
+          <p className="text-3xl xl:text-3xl lg:text-2xl md:text-lg md:pt-1 text-pacifico font-bold text-nunitoFont">
             Pritom Rabi Das
           </p>
         </div>
         <div className="mx-auto flex justify-center my-6 gap-4">
+          <Link to="/people">
+            <button
+              type="button"
+              className="px-5 xl:px-5 lg:px-5 md:px-2 py-3 text-sm xl:text-sm lg:text-sm md:text-xs font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800  focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            >
+              Add Request
+            </button>
+          </Link>
           <button
             type="button"
-            className="px-5 py-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800  focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-          >
-            <Link to="/people">Add Request</Link>
-          </button>
-          <button
-            type="button"
-            className="px-5 py-3 text-base font-medium text-center text-white bg-slate-700 rounded-lg hover:bg-slate-800  focus:outline-none focus:ring-slate-300 dark:bg-slate-600 dark:hover:bg-slate-700 dark:focus:ring-slate-800"
+            className="px-5 xl:px-5 lg:px-5 md:px-2 py-3 text-sm xl:text-sm lg:text-sm md:text-xsfont-medium text-center text-white bg-slate-700 rounded-lg hover:bg-slate-800  focus:outline-none focus:ring-slate-300 dark:bg-slate-600 dark:hover:bg-slate-700 dark:focus:ring-slate-800"
           >
             <Link to="/chat">Message</Link>
           </button>
@@ -64,16 +66,16 @@ const Profile = () => {
                 <img
                   src="pic-2.png"
                   alt=""
-                  className="w-12 h-12 rounded-full"
+                  className="w-12 xl:w-12 lg:w-10 md:w-8 h-12 xl:h-12 lg:h-10 md:h-8 rounded-full"
                 />
-                <p className=" text-3xl text-pacifico font-semibold text-nunitoFont mt-1">
+                <p className=" text-3xl xl:text-3xl lg:text-2xl md:text-lg text-pacifico font-semibold text-nunitoFont mt-1">
                   Pritom Rabi Das
                 </p>
               </li>
             </div>
             <a href="#">
               <img
-                className="rounded-t-lg w-[800px] mx-auto justify-center h-[500px]"
+                className="rounded-t-lg w-[800px] xl:w-[800px] lg:w-[600px] md:w-[450px] mx-auto justify-center h-[500px] xl:h-[500px] lg:h-[420px] md:h-[350px]"
                 src="pic-2.png"
                 alt=""
               />
