@@ -284,7 +284,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-        <div className="hidden sm:hidden md:block lg:block xl:block pl-3 pt-2 bg-slate-100 w-1/4 h-full overflow-scroll xl:overflow-scroll fixed ">
+        <div className=" pl-3 pt-2 bg-slate-100 w-1/4 h-full overflow-scroll xl:overflow-scroll fixed ">
           <div className="">
             <ul className="pt-3 text-lg xl:text-lg lg:text-base md:text-sm text-pacifico font-semibold md:font-medium text-nunitoFont">
               <Link to="/profile">
