@@ -8,10 +8,10 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { PiChatTeardropText } from "react-icons/pi";
 import { GoSearch } from "react-icons/go";
-import { FiAlignCenter } from "react-icons/fi";
+import { FiAlignJustify } from "react-icons/fi";
 import { IoGameController } from "react-icons/io5";
 import { RiGroup2Line } from "react-icons/ri";
-import { RxCross2 } from "react-icons/rx";
+import { AiOutlineClose } from "react-icons/ai";
 
 const Navbar = () => {
   const [profile, setProfile] = useState(false);
@@ -163,6 +163,7 @@ const Navbar = () => {
             <span>
               <PiChatTeardropText className="w-5 xl:w-10 lg:w-10 md:w-7 sm:w-6 h-5 xl:h-10 lg:h-10 md:h-7 sm:h-6 xl:mt-2 lg:mt-2 md:mt-1 sm:mt-2 mb-2 rounded-full text-navegrey " />
             </span>
+            <div className="hidden sm:hidden md:block lg:block xl:block">
             <div className=" flex px-1 xl:px-4 lg:px-3 md:px-1 sm:px-1 xl:pl-4 lg:pl-4 md:pl-2 sm:pl-1 pl-1 xl:pr-10 lg:pr-9 md:pr-0 sm:pr-0 pr-0 h-7 xl:h-11 lg:h-11 md:h-9 sm:h-8 rounded-3xl xl:rounded-3xl bg-slate-300 m-auto items-center ">
               <span className="m-auto flex items-center pl-2 xl:text-lg lg:text-base md:text-xs sm:text-xs text-xs">
                 <GoSearch />
@@ -173,9 +174,10 @@ const Navbar = () => {
                 className="w-32 xl:w-48 lg:w-48 md:w-36 sm:w-36 outline-none placeholder:text-secandari placeholder:font-lobster text-xs md:text-xs sm:text-xs px-1 bg-transparent text-navegrey font-nunitoFont "
               />
             </div>
+            </div>
           </div>
           <div className=" flex justify-center mx-auto">
-            <ul className="flex ml-0 xl:ml-24 lg:ml-1 md:ml-10 sm:ml-2 text-gray-800 text-base xl:text-3xl lg:text-2xl md:text-xl sm:text-base gap-3 xl:gap-4 lg:gap-2 md:gap-2 sm:gap-3 ">
+            <ul className="flex ml-0 xl:ml-24 lg:ml-1 md:ml-10 sm:ml-2 text-gray-800 text-base xl:text-3xl lg:text-2xl md:text-xl sm:text-base gap-1 xl:gap-4 lg:gap-2 md:gap-2 sm:gap-1 ">
               <Link to="/">
                 <li
                   onClick={HandleHome}
@@ -236,55 +238,143 @@ const Navbar = () => {
               </li>
             </ul>
           </div>
-          <div className="flex justify-end m-auto">
+          <div className="flex justify-end m-auto xl:hidden lg:hidden md:hidden sm:block">
             <ul className="text-navegrey text-2xl flex gap-3">
-              {/* <li className=" w-10 h-10 rounded-full bg-slate-400 m-auto items-center flex justify-center">
-                <RiGroup2Line className=" text-[33px] text-blue-950" />
-              </li> */}
-              {/* <li
-                onClick={HandleProfile}
-                style={{
-                  backgroundColor: profile ? "rgb(203 213 225)" : "",
-                  transition: "background-color 0.3s ease",
-                }}
-                className=" w-10 h-10 rounded-full bg-slate-400 m-auto items-center flex justify-center"
-              >
+            {setting ? (
+          <div className=" fixed top-0 right-0 h-screen w-full flex">
+            <div className=" w-3/4 bg-slate-50 right-0 fixed px-10 h-full sideMenu">
+              <div className=" justify-end flex mt-10">
+                <span>
+                  <AiOutlineClose
+                    onClick={() => setSetting(false)}
+                    className="md:text-xl sm:text-xl cursor-pointer text-gray-800"
+                  />
+                </span>
+              </div>
+              <div className="text-center">
+                <ul className="  sm:leading-[10px] leading-[80px] sm:text-base text-[16px] font-normal cursor-pointer text-slate-950">
                 <Link to="/profile">
+                <li
+                  onClick={HandleProfile}
+                  style={{
+                    backgroundColor: profile ? "rgb(203 213 225)" : "",
+                    transition: "background-color 0.3s ease",
+                  }}
+                  className="flex gap-4 mb-3 hover:bg-slate-300 hover:w-screen py-2 pl-2 rounded-lg lg:mb-1 items-center"
+                >
                   <img
                     src="pic-2.png"
                     alt=""
-                    className="w-8 h-8 rounded-full"
+                    className="w-7  h-7 rounded-full"
                   />
-                </Link>
-              </li> */}
-              {setting ? (
+                  <p>Pritom Rabi Das</p>
+                </li>
+              </Link>
+              <Link to="/chat">
                 <li
-                  onClick={() => setSetting(false)}
+                  onClick={HandleChat}
                   style={{
-                    backgroundColor: setting ? "rgb(241 245 249)" : "",
+                    backgroundColor: chat ? "rgb(203 213 225)" : "",
                     transition: "background-color 0.3s ease",
                   }}
-                  className=" w-5 md:w-7 xl:w-10 lg:w-9 sm:w-6 h-5 md:h-7 xl:h-10 lg:h-9 sm:h-6 rounded-full bg-slate-400 m-auto items-center flex justify-center"
+                  className="flex gap-2 mt-5 hover:bg-slate-300 hover:w-screen py-2 pl-2 rounded-lg lg:mt-3 items-center"
                 >
-                  <RxCross2 className=" xl:text-xl lg:text-lg md:text-base sm:text-sm text-sm" />
+                  <span className="text-2xl md:text-xl ml-2 mt-[2px] ">
+                    <RiChat1Fill className="text-navegrey" />
+                  </span>
+                  <h3 className="">Chat</h3>
                 </li>
-              ) : (
+              </Link>
+              <Link to="/people">
                 <li
-                  onClick={HandleSetting}
+                  onClick={HandlePeople}
                   style={{
-                    backgroundColor: setting ? "rgb(241 245 249)" : "",
+                    backgroundColor: people ? "rgb(203 213 225)" : "",
                     transition: "background-color 0.3s ease",
                   }}
-                  className=" w-5 md:w-7 xl:w-10 lg:w-9 sm:w-6 h-5 md:h-7 xl:h-10 lg:h-9 sm:h-6 rounded-full bg-slate-400 m-auto items-center flex justify-center"
+                  className="flex gap-2 mt-5 hover:bg-slate-300 hover:w-screen py-2 pl-2 rounded-lg lg:mt-3 items-center"
                 >
-                  <FiAlignCenter className="xl:text-xl lg:text-lg md:text-base sm:text-sm text-sm" />
+                  <span className="text-2xl md:text-xl ml-2 mt-[2px] ">
+                    <BsFillPeopleFill className="text-navegrey" />
+                  </span>
+                  <h3 className="">People</h3>
                 </li>
-              )}
+              </Link>
+              <Link to="/request">
+                <li
+                  onClick={HandleRequest}
+                  style={{
+                    backgroundColor: request ? "rgb(203 213 225)" : "",
+                    transition: "background-color 0.3s ease",
+                  }}
+                  className="flex gap-2 mt-5 hover:bg-slate-300 hover:w-screen py-2 pl-2 rounded-lg lg:mt-3 items-center"
+                >
+                  <span className="text-2xl md:text-xl ml-2 mt-[2px] ">
+                    <MdPeopleAlt className="text-navegrey" />
+                  </span>
+                  <h3 className="">Friend Request</h3>
+                </li>
+              </Link>
+              <Link to="/friend">
+                <li
+                  onClick={HandleFriend}
+                  style={{
+                    backgroundColor: friend ? "rgb(203 213 225)" : "",
+                    transition: "background-color 0.3s ease",
+                  }}
+                  className="flex gap-2 mt-5 hover:bg-slate-300 hover:w-screen py-2 pl-2 rounded-lg lg:mt-3 items-center"
+                >
+                  <span className="text-2xl md:text-xl ml-2 mt-[2px] ">
+                    <SlPeople className="text-navegrey" />
+                  </span>
+                  <h3 className="">Friends</h3>
+                </li>
+              </Link>
+              <Link to="/group">
+                <li
+                  onClick={HandleGroup}
+                  style={{
+                    backgroundColor: group ? "rgb(203 213 225)" : "",
+                    transition: "background-color 0.3s ease",
+                  }}
+                  className="flex gap-2 mt-5 hover:bg-slate-300 hover:w-screen py-2 pl-2 rounded-lg lg:mt-3 items-center"
+                >
+                  <span className="text-2xl md:text-xl ml-2 mt-[2px] ">
+                    <RiGroup2Line className="text-navegrey" />
+                  </span>
+                  <h3 className="">Group</h3>
+                </li>
+              </Link>
+              <Link to="/block">
+                <li
+                  onClick={HandleBlock}
+                  style={{
+                    backgroundColor: block ? "rgb(203 213 225)" : "",
+                    transition: "background-color 0.3s ease",
+                  }}
+                  className="flex gap-2 mt-5 hover:bg-slate-300 hover:w-screen py-2 pl-2 rounded-lg lg:mt-3 items-center"
+                >
+                  <span className="text-2xl md:text-xl ml-2 mt-[2px] ">
+                    <TbLockCancel className="text-navegrey" />
+                  </span>
+                  <h3 className="">Block</h3>
+                </li>
+              </Link>
+                </ul>
+              </div>
+            </div>
+          </div>
+        ) : (
+          <FiAlignJustify
+            onClick={HandleSetting}
+            className="md:text-2xl sm:text-2xl text-2xl cursor-pointer text-gray-800 xl:hidden lg:hidden 2xl:hidden md:block sm:block block"
+          />
+        )}
             </ul>
           </div>
         </div>
       </div>
-        <div className=" pl-3 pt-2 bg-slate-100 w-1/4 h-full overflow-scroll xl:overflow-scroll fixed ">
+        <div className=" pl-3 pt-2 bg-slate-100 w-1/4 h-full overflow-scroll xl:overflow-scroll fixed hidden sm:hidden md:hidden lg:block xl:block">
           <div className="">
             <ul className="pt-3 text-lg xl:text-lg lg:text-base md:text-sm text-pacifico font-semibold md:font-medium text-nunitoFont">
               <Link to="/profile">
@@ -304,21 +394,6 @@ const Navbar = () => {
                   <p>Pritom Rabi Das</p>
                 </li>
               </Link>
-              {/* <Link to="/">
-                <li
-                  onClick={HandleHome}
-                  style={{
-                    backgroundColor: home ? "rgb(203 213 225)" : "",
-                    transition: "background-color 0.3s ease",
-                  }}
-                  className="flex gap-2 mt-2 hover:bg-slate-300 hover:w-screen py-2 pl-2 rounded-lg"
-                >
-                  <span className="text-2xl ml-2 mt-[2px] ">
-                    <IoMdHome className="text-navegrey" />
-                  </span>
-                  <h3 className="">Home</h3>
-                </li>
-              </Link> */}
               <Link to="/chat">
                 <li
                   onClick={HandleChat}
