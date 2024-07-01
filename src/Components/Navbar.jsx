@@ -238,7 +238,7 @@ const Navbar = () => {
               </li>
             </ul>
           </div>
-          <div className="flex justify-end m-auto xl:hidden lg:hidden md:hidden sm:block">
+          <div className="flex justify-end m-auto xl:hidden lg:hidden md:block sm:block">
             <ul className="text-navegrey text-2xl flex gap-3">
             {setting ? (
           <div className=" fixed top-0 right-0 h-screen w-full flex">

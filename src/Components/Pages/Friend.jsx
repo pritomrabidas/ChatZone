@@ -2,7 +2,7 @@ import FriendItem from "./FriendItem"
 
 const Friend = () => {
   return (
-    <div className="bg-slate-100 w-3/4 h-screen absolute top-16 left-1/4">
+    <div className="bg-slate-100 xl:w-3/4 lg:w-3/4 w-full h-screen absolute top-16 xl:left-1/4 lg:left-1/4 left-0">
     <FriendItem/>
    </div>
   )

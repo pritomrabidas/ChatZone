@@ -1,7 +1,7 @@
 
 const Block = () => {
   return (
-    <div className="bg-slate-100 w-3/4 h-screen absolute top-16 left-1/4">
+    <div className="bg-slate-100 xl:w-3/4 lg:w-3/4 w-full h-screen absolute top-16 xl:left-1/4 lg:left-1/4 left-0">
      <div className=" m-4">
         <div className=" border-2 py-4 px-6 rounded-xl flex gap-3 bg-scroll w-full">
           <div className="">

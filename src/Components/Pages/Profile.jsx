@@ -9,7 +9,7 @@ const Profile = () => {
     setShow(false);
   };
   return (
-    <div className=" bg-slate-100 absolute left-1/4">
+    <div className=" bg-slate-100 w-full absolute xl:left-1/4 lg:left-1/4 md:left-0 sm:left-0 left-0 ">
       <div className=" h-full w-full">
         <div className="">
           <img
