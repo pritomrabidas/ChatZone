@@ -176,7 +176,7 @@ const Navbar = () => {
             </div>
             </div>
           </div>
-          <div className=" flex justify-center mx-auto">
+          <div className=" flex xl:justify-center lg:justify-center md:justify-end sm:justify-end justify-center mr-0 xl:ml-0 lg-ml-0 mx-auto">
             <ul className="flex ml-0 xl:ml-24 lg:ml-1 md:ml-10 sm:ml-2 text-gray-800 text-base xl:text-3xl lg:text-2xl md:text-xl sm:text-base gap-1 xl:gap-4 lg:gap-2 md:gap-2 sm:gap-1 ">
               <Link to="/">
                 <li
