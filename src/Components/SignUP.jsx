@@ -1,14 +1,15 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { PiChatTeardropText } from "react-icons/pi";
 import { getAuth, createUserWithEmailAndPassword, sendEmailVerification } from "firebase/auth";
 import { useState } from "react";
 import "react-toastify/dist/ReactToastify.css";
 import { toast, ToastContainer } from "react-toastify";
 const SignUP = () => {
+  const auth = getAuth();
+  const navigate = useNavigate("")
   let [name, setName] = useState("");
   let [email, setEmail] = useState("");
   let [password, setPassword] = useState("");
-  const auth = getAuth();
   const [userError, setuserError] = useState({
     nameError: "",
     emailError: "",
@@ -35,6 +36,9 @@ const SignUP = () => {
           setEmail("");
           setPassword("");
           setuserError("")
+          setTimeout(() => {
+            navigate("/signin")
+          }, 4000);
         })
         .catch((error) => {
           if (error.code.includes("auth/invalid-email")) {
