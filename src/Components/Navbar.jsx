@@ -156,12 +156,12 @@ const Navbar = () => {
   };
 
   return (
-    <div className="fixed w-full h-full z-20">
-      <div className=" bg-white w-full gap-2 p-1 xl:p-1 lg:p-1 md:p-0 sm:p-0 pl-3 shadow-lg border-8 xl:border-8 lg:border-8 md:border-8 sm:border-2 border-white ">
-        <div className=" flex ">
-          <div className="flex gap-1 xl:gap-3 md:gap-0 sm:gap-1 lg:gap-1 justify-start">
+    <nav className="fixed w-full h-full z-20">
+      <div className=" bg-white w-full gap-2 p-1 xl:p-1 lg:p-1 md:p-0 sm:p-0 pl-3 shadow border-8 xl:border-8 lg:border-8 md:border-8 sm:border-2 border-white ">
+      <div className=" flex py-1 items-center">
+          <div className="flex gap-1 xl:gap-3 md:gap-1 sm:gap-1 lg:gap-1 justify-start pl-2">
             <span>
-              <PiChatTeardropText className="w-5 xl:w-10 lg:w-10 md:w-7 sm:w-6 h-5 xl:h-10 lg:h-10 md:h-7 sm:h-6 xl:mt-2 lg:mt-2 md:mt-1 sm:mt-2 mb-2 rounded-full text-navegrey " />
+              <PiChatTeardropText className="w-7 xl:w-12 lg:w-10 md:w-8 sm:w-7 h-7 xl:h-12 lg:h-10 md:h-8 sm:h-7 rounded-full text-navegrey " />
             </span>
             <div className="hidden sm:hidden md:block lg:block xl:block">
             <div className=" flex px-1 xl:px-4 lg:px-3 md:px-1 sm:px-1 xl:pl-4 lg:pl-4 md:pl-2 sm:pl-1 pl-1 xl:pr-10 lg:pr-9 md:pr-0 sm:pr-0 pr-0 h-7 xl:h-11 lg:h-11 md:h-9 sm:h-8 rounded-3xl xl:rounded-3xl bg-slate-300 m-auto items-center ">
@@ -177,7 +177,7 @@ const Navbar = () => {
             </div>
           </div>
           <div className=" flex xl:justify-center lg:justify-center md:justify-end sm:justify-end justify-center mr-0 xl:ml-0 lg-ml-0 mx-auto">
-            <ul className="flex ml-0 xl:ml-24 lg:ml-1 md:ml-10 sm:ml-2 text-gray-800 text-base xl:text-3xl lg:text-2xl md:text-xl sm:text-base gap-1 xl:gap-4 lg:gap-2 md:gap-2 sm:gap-1 ">
+            <ul className="flex ml-0 xl:ml-24 lg:ml-1 md:ml-10 sm:ml-6 text-gray-800 xl:text-3xl lg:text-2xl md:text-xl sm:text-sm text-sm gap-2 xl:gap-4 lg:gap-2 md:gap-2 sm:gap-4 ">
               <Link to="/">
                 <li
                   onClick={HandleHome}
@@ -185,7 +185,7 @@ const Navbar = () => {
                     backgroundColor: home ? "rgb(241 245 249)" : "",
                     transition: "background-color 0.3s ease",
                   }}
-                  className=" w-8 xl:w-28 lg:w-24 md:w-16 sm:w-9 h-7 md:h-10 xl:h-14 sm:h-8 md:mt-1 md:rounded-md m-auto flex items-center justify-center rounded-lg bg-white delay-300 hover:bg-slate-100 "
+                  className=" w-8 xl:w-28 lg:w-24 md:w-16 sm:w-9 h-7 md:h-10 xl:h-14 sm:h-7 md:mt-1 m-auto flex items-center justify-center xl:rounded-lg lg:rounded-lg md:rounded-lg rounded  bg-white delay-300 hover:bg-slate-100 "
                 >
                   <IoMdHome />
                 </li>
@@ -197,7 +197,7 @@ const Navbar = () => {
                     backgroundColor: request ? "rgb(241 245 249)" : "",
                     transition: "background-color 0.3s ease",
                   }}
-                  className="w-8 xl:w-28 md:w-16 sm:w-9 h-7 md:h-10 xl:h-14 sm:h-8 md:mt-1 md:rounded-md m-auto flex items-center justify-center rounded-lg bg-white delay-300 hover:bg-slate-100 lg:w-24"
+                  className=" w-8 xl:w-28 lg:w-24 md:w-16 sm:w-9 h-7 md:h-10 xl:h-14 sm:h-7 md:mt-1 m-auto flex items-center justify-center xl:rounded-lg lg:rounded-lg md:rounded-lg rounded  bg-white delay-300 hover:bg-slate-100 "
                 >
                   <MdPeopleAlt />
                 </li>
@@ -209,7 +209,7 @@ const Navbar = () => {
                     backgroundColor: friend ? "rgb(241 245 249)" : "",
                     transition: "background-color 0.3s ease",
                   }}
-                  className="w-8 xl:w-28 md:w-16 sm:w-9 h-7 md:h-10 xl:h-14 sm:h-8 md:mt-1 md:rounded-md m-auto flex items-center justify-center rounded-lg bg-white delay-300 hover:bg-slate-100 lg:w-24"
+                  className=" w-8 xl:w-28 lg:w-24 md:w-16 sm:w-9 h-7 md:h-10 xl:h-14 sm:h-7 md:mt-1 m-auto flex items-center justify-center xl:rounded-lg lg:rounded-lg md:rounded-lg rounded  bg-white delay-300 hover:bg-slate-100 "
                 >
                   <SlPeople />
                 </li>
@@ -221,7 +221,7 @@ const Navbar = () => {
                     backgroundColor: block ? "rgb(241 245 249)" : "",
                     transition: "background-color 0.3s ease",
                   }}
-                  className=" w-8 xl:w-28 md:w-16 sm:w-9 h-7 md:h-10 xl:h-14 sm:h-8 md:mt-1 md:rounded-md m-auto flex items-center justify-center rounded-lg bg-white delay-300 hover:bg-slate-100 lg:w-24"
+                  className=" w-8 xl:w-28 lg:w-24 md:w-16 sm:w-9 h-7 md:h-10 xl:h-14 sm:h-7 md:mt-1 m-auto flex items-center justify-center xl:rounded-lg lg:rounded-lg md:rounded-lg rounded  bg-white delay-300 hover:bg-slate-100 "
                 >
                   <TbLockCancel />
                 </li>
@@ -232,7 +232,7 @@ const Navbar = () => {
                   backgroundColor: game ? "rgb(241 245 249)" : "",
                   transition: "background-color 0.3s ease",
                 }}
-                className="w-8 xl:w-28 md:w-16 sm:w-9 h-7 md:h-10 xl:h-14 sm:h-8 md:mt-1 md:rounded-md m-auto flex items-center justify-center rounded-lg bg-white delay-300 hover:bg-slate-100 lg:w-24"
+               className=" w-8 xl:w-28 lg:w-24 md:w-16 sm:w-9 h-7 md:h-10 xl:h-14 sm:h-7 md:mt-1 m-auto flex items-center justify-center xl:rounded-lg lg:rounded-lg md:rounded-lg rounded  bg-white delay-300 hover:bg-slate-100 "
               >
                 <IoGameController />
               </li>
@@ -241,18 +241,18 @@ const Navbar = () => {
           <div className="flex justify-end m-auto xl:hidden lg:hidden md:block sm:block">
             <ul className="text-navegrey text-2xl flex gap-3">
             {setting ? (
-          <div className=" fixed top-0 right-0 h-screen w-full flex">
-            <div className=" w-3/4 bg-slate-50 right-0 fixed px-10 h-full sideMenu">
+          <div className=" fixed top-0 right-0 h-screen w-full flex ">
+            <div className=" w-full sm:w-full md:w-3/4  bg-slate-50 right-0 fixed px-10 h-full sideMenu ">
               <div className=" justify-end flex mt-10">
                 <span>
                   <AiOutlineClose
                     onClick={() => setSetting(false)}
-                    className="md:text-xl sm:text-xl cursor-pointer text-gray-800"
+                    className="md:text-xl sm:text-xl text-base cursor-pointer text-gray-800"
                   />
                 </span>
               </div>
               <div className="text-center">
-                <ul className="  sm:leading-[10px] leading-[80px] sm:text-base text-[16px] font-normal cursor-pointer text-slate-950">
+                <ul className=" sm:leading-[10px] leading-[10px] text-base text-[16px] font-normal cursor-pointer text-slate-950">
                 <Link to="/profile">
                 <li
                   onClick={HandleProfile}
@@ -367,14 +367,14 @@ const Navbar = () => {
         ) : (
           <FiAlignJustify
             onClick={HandleSetting}
-            className="md:text-2xl sm:text-2xl text-2xl cursor-pointer text-gray-800 xl:hidden lg:hidden 2xl:hidden md:block sm:block block"
+            className="md:text-2xl sm:text-xl text-xl cursor-pointer text-gray-800 xl:hidden lg:hidden 2xl:hidden md:block sm:block block "
           />
         )}
             </ul>
           </div>
         </div>
       </div>
-        <div className=" pl-3 pt-2 bg-slate-100 w-1/4 h-full overflow-scroll xl:overflow-scroll fixed hidden sm:hidden md:hidden lg:block xl:block">
+        <div className=" pl-3 pt-2 bg-slate-100 w-1/4 h-full overflow-hidden fixed hidden sm:hidden md:hidden lg:block xl:block">
           <div className="">
             <ul className="pt-3 text-lg xl:text-lg lg:text-base md:text-sm text-pacifico font-semibold md:font-medium text-nunitoFont">
               <Link to="/profile">
@@ -487,7 +487,7 @@ const Navbar = () => {
             </ul>
           </div>
         </div>
-    </div>
+    </nav>
   );
 };
 

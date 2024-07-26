@@ -4,9 +4,9 @@ const ChatItem = () => {
   return (
     <div className=" m-4">
         <div className=" py-2 pl-4 rounded-xl flex gap-3 bg-scroll w-full bg-green-50 justify-between">
-          <div className="flex gap-3">
-            <img src="pic-2.png" alt="" className="w-14 xl:w-14 lg:w-12 h-14 xl:h-14 lg:h-12 rounded-xl" />
-            <p className=" text-xl xl:text-xl lg:text-lg text-pacifico font-semibold text-nunitoFont mt-3">
+          <div className="flex gap-3 items-center">
+            <img src="pic-2.png" alt="" className="xl:w-14 lg:w-12 md:w-10 sm:w-10 w-10 xl:h-14 lg:h-12 md:h-10 sm:h-10 h-10 rounded-xl" />
+            <p className=" text-lg xl:text-xl lg:text-lg text-pacifico font-semibold text-nunitoFont ">
               Pritom Rabi Das
             </p>
           </div>

@@ -1,6 +1,6 @@
 const Home = () => {
   return (
-    <div className=" absolute h-full top-12 xl:left-1/4 lg:left-1/4 left-0 right-0 bg-slate-100 px-5 py-10 ">
+    <div className=" absolute h-full top-14 xl:left-1/4 lg:left-1/4 left-0 right-0 bg-slate-100 px-5 py-10 ">
       <div className=" w-full border-2 drop-shadow-2xl rounded-xl bg-slate-50 px-10 py-7">
         <div className="w-full">
           <li className="flex gap-4 py-2 rounded-lg">
