@@ -17,7 +17,7 @@ const Profile = () => {
             alt=""
             className="w-screen xl:h-[270px] lg:h-[240px] md:h-[190px] sm:h-[170px] h-[170px] relative"
           />
-          <div className="absolute left-[45%] xl:top-[200px] lg:top-[170px] md:top-[120px] sm:top-[120px] top-[110px] m-auto flex justify-center items-center">
+          <div className="absolute left-[40%] sm:left-[45%] md:left-[45%] lg:left-[45%] xl:left-[45%] xl:top-[200px] lg:top-[170px] md:top-[120px] sm:top-[120px] top-[110px] m-auto flex justify-center items-center">
             <img
               src="pic-2.png"
               alt=""
