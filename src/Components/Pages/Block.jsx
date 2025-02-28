@@ -14,8 +14,8 @@ const Block = () => {
             Pritom Rabi Das
           </p>
         </div>
-          <div className=" justify-end flex m-auto ">
-          <button className=" text-base xl:text-lg lg:text-base font-['interFont'] text-white font-medium px-3 xl:px-4 md:px-3 py-2 xl:py-3 md:py-2 rounded-lg  shadow-2xl bg-blue-700 delay-100 ">Unblock</button>
+          <div className=" justify-end flex ">
+          <button className="text-sm font-interFont text-white font-medium px-3 xl:px-4 md:px-3 py-2 xl:py-3 md:py-2 rounded-lg  shadow-2xl bg-blue-700 delay-100 ">Unblock</button>
           </div>
         </div>
       </div>

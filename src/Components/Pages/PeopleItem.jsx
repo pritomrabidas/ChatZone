@@ -10,7 +10,7 @@ const PeopleItem = () => {
             </p>
           </div>
           <div className="justify-end">
-          <button className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg  xl:text-lg lg:text-base md:text-base sm:text-base text-sm font-['interFont'] text-white font-medium xl:px-4 lg:px-3 md:px-3 sm:px-2 px-2 py-2 xl:py-3 lg:py-2 rounded-lg  shadow-2xl bg-blue-700 delay-100 ">Add Friend</button>
+          <button className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg   text-sm font-interFont text-white font-medium xl:px-4 lg:px-3 md:px-3 sm:px-2 px-2 py-2 xl:py-3 lg:py-2 rounded-lg  shadow-2xl bg-blue-700 delay-100 ">Add Friend</button>
           </div>
         </div>
       </div>

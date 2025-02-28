@@ -15,13 +15,13 @@ const Profile = () => {
           <img
             src="cover-1.png"
             alt=""
-            className="w-screen xl:h-[270px] lg:h-[240px] md:h-[190px] sm:h-[170px] h-[170px] relative"
+            className="w-screen xl:h-[270px] lg:h-[240px] md:h-[190px] sm:h-[170px] h-[170px] relative object-cover"
           />
           <div className="absolute left-[40%] sm:left-[45%] md:left-[45%] lg:left-[45%] xl:left-[45%] xl:top-[200px] lg:top-[170px] md:top-[120px] sm:top-[120px] top-[110px] m-auto flex justify-center items-center">
             <img
               src="pic-2.png"
               alt=""
-              className=" xl:w-32 lg:w-32 md:w-28 sm:w-24 w-24 xl:h-32 lg:h-32 md:h-28 sm:h-24 h-24 rounded-full relative"
+              className=" xl:w-32 lg:w-32 md:w-28 sm:w-24 w-24 xl:h-32 lg:h-32 md:h-28 sm:h-24 h-24 rounded-full relative object-cover"
             />
             <span
               onClick={() => HandleCamera()}
@@ -39,54 +39,51 @@ const Profile = () => {
           <span className="xl:text-3xl lg:text-2xl md:text-xl sm:text-xl text-xl font-bold text-red-950 p-2 rounded-xl border-[1px] border-slate-200 drop-shadow-md bg-slate-50">
             <MdEditDocument />
           </span>
-          <p className="xl:text-3xl lg:text-2xl md:text-lg sm:text-lg text-lg md:pt-1 text-pacifico font-bold text-nunitoFont">
+          <p className="xl:text-3xl lg:text-2xl md:text-lg sm:text-lg text-lg md:pt-1 font-nunitoFont font-bold">
             Pritom Rabi Das
           </p>
         </div>
         <div className="mx-auto flex justify-center my-6 gap-4">
-          <Link to="/people">
-            <button
-              type="button"
-              className=" xl:px-5 lg:px-5 md:px-2 sm:px-2 px-2 py-3 xl:text-sm lg:text-sm md:text-xs sm:text-xs text-xs font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800  focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+          <Link to="/people"
+              className=" xl:px-5 lg:px-5 md:px-2 sm:px-2 px-2 py-3  lg:text-sm sm:text-xs text-[9px] font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 font-interFont "
             >
               Add Request
-            </button>
           </Link>
           <button
             type="button"
-            className="xl:px-5 lg:px-5 md:px-2 sm:px-2 px-2 py-3 xl:text-sm lg:text-sm md:text-xs sm:text-xs text-xs font-medium text-center text-white bg-slate-700 rounded-lg hover:bg-slate-800  focus:outline-none focus:ring-slate-300 dark:bg-slate-600 dark:hover:bg-slate-700 dark:focus:ring-slate-800"
+            className="xl:px-5 lg:px-5 md:px-2 sm:px-2 px-2 py-3  lg:text-sm sm:text-xs text-[9px] font-medium text-center text-white bg-slate-700 rounded-lg hover:bg-slate-800 font-interFont cursor-pointer"
           >
             <Link to="/chat">Message</Link>
           </button>
         </div>
         <div className="p-6 bg-slate-100">
-          <div className=" bg-white border border-gray-100 drop-shadow-2xl rounded-xl shadow dark:bg-gray-100 dark:border-gray-200">
+          <div className=" bg-white border border-gray-100 rounded-xl shadow dark:bg-gray-100 dark:border-gray-200">
             <div className="">
               <li className="flex gap-4 m-3 py-2 pl-2 rounded-lg items-center">
                 <img
                   src="pic-2.png"
                   alt=""
-                  className="xl:w-12 lg:w-10 md:w-8 sm:w-8 w-8 xl:h-12 lg:h-10 md:h-8 sm:h-8 h-8 rounded-full"
+                  className="xl:w-12 lg:w-10 md:w-8 sm:w-8 w-8 xl:h-12 lg:h-10 md:h-8 sm:h-8 h-8 rounded-full "
                 />
-                <p className="xl:text-3xl lg:text-2xl md:text-lg sm:text-lg text-lg text-pacifico font-semibold text-nunitoFont ">
+                <p className="xl:text-3xl lg:text-2xl md:text-lg sm:text-lg text-lg font-interFont font-semibold text-nunitoFont ">
                   Pritom Rabi Das
                 </p>
               </li>
             </div>
-            <a href="#">
+            <Link to="/">
               <img
-                className="rounded-t-lg xl:w-[800px] lg:w-[600px] md:w-[500px] sm:w-[500px] w-[400px] mx-auto justify-center  xl:h-[500px] lg:h-[420px] md:h-[350px] sm:h-[350px] h-[350px]"
+                className="rounded-t-lg xl:w-[800px] lg:w-[600px] md:w-[500px] sm:w-[500px] w-[320px] mx-auto justify-center  xl:h-[500px] lg:h-[420px] md:h-[350px] sm:h-[350px] h-[320px] object-cover"
                 src="pic-2.png"
                 alt=""
               />
-            </a>
+            </Link>
             <div className="p-5">
-              <a
-                href="#"
-                className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+              <Link
+                to="/"
+                className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 cursor-pointer"
               >
                 Read more
-              </a>
+              </Link>
             </div>
           </div>
         </div>
